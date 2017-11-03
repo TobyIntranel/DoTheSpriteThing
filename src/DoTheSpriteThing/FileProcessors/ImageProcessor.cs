@@ -7,7 +7,7 @@ namespace DoTheSpriteThing.FileProcessors
     {
         public void CreateSprite(MagickImageCollection spriteImages, string spriteFilename)
         {
-            using (MagickImage result = spriteImages.AppendVertically())
+            using (var result = spriteImages.AppendVertically())
             {
                 result.Write(spriteFilename);
             }
